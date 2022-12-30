@@ -16,6 +16,8 @@ class Node {
 
 function knightTravails(startX, startY, endX, endY) {
     
+    if(startX < 1 || startX > 8 || startY < 1 || startY > 8 || endX < 1 || endX > 8 || endY < 1 || endY > 8) return null;
+
     const startNode = new Node(startX, startY);
     const visitedNodes = [];
     let allNodes = [];
@@ -86,6 +88,7 @@ function getNodeslevelOrder(root) {
 }
 
 function getPathFromRoot(node){
+    if(node) {
         let path = [];
         path.unshift([node.x, node.y]);
         if (node) {
@@ -94,7 +97,8 @@ function getPathFromRoot(node){
             path.unshift([node.x, node.y]);
           }
         }
-        return path;
+        return path;}
+        return null;
 }
 
 console.log(getPathFromRoot(knightTravails(1, 1, 1, 1)));
