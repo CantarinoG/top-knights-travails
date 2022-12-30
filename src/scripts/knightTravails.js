@@ -14,7 +14,7 @@ class Node {
     }
 }
 
-function knightTravails(startX, startY, endX, endY) {
+export function knightTravails(startX, startY, endX, endY) {
     
     if(startX < 1 || startX > 8 || startY < 1 || startY > 8 || endX < 1 || endX > 8 || endY < 1 || endY > 8) return null;
 
@@ -71,7 +71,7 @@ function getNodeslevelOrder(root) {
     q.push(root);
     //While there is at least one discovered node
     while(q.length > 0){
-        current = q[0];
+        let current = q[0];
         nodes.push(current);
         //console.log(current.x, current.y);
         if(current.next1) q.push(current.next1);
@@ -87,7 +87,7 @@ function getNodeslevelOrder(root) {
     return nodes;
 }
 
-function getPathFromRoot(node){
+export function getPathFromRoot(node){
     if(node) {
         let path = [];
         path.unshift([node.x, node.y]);
@@ -100,5 +100,3 @@ function getPathFromRoot(node){
         return path;}
         return null;
 }
-
-console.log(getPathFromRoot(knightTravails(1, 1, 1, 1)));

@@ -6,8 +6,8 @@ export function renderUI() {
     body.innerHTML = `
     <header>
         <h1>Knights Travails</h1>
-        <h2>Position your knight...</h2>
-        <button>RESET</button>
+        <h2 id="display">Position your knight...</h2>
+        <button id="reset">RESET</button>
     </header>
     <main>
         <div id="board">
@@ -21,15 +21,14 @@ export function renderUI() {
 
 function createBoard() {
     let boardHtml = "";
-    for (let i = 0; i < 8; i++) {
+    for (let i = 1; i <= 8; i++) {
         boardHtml += "<div class='row'>";
-        for (let j = 0; j < 8; j++) {
-            boardHtml += `<div class='column' class='tile'></div>`;
+        for (let j = 1; j <= 8; j++) {
+            boardHtml += `<div class='column' data-coord='${i}${j}'></div>`;
         }
         boardHtml += "</div>";
     }
     board.innerHTML = boardHtml;
-    console.log(board);
 }
 
 export function setFavicon() {
