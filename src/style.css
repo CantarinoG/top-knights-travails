@@ -75,6 +75,14 @@ main {
     aspect-ratio: 1/1;
     height: calc(min(76vh, 98vw) / 8);
     cursor: pointer;
+    color: black;
+    text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff;
+    font-size: xx-large;
+    font-family: var(--arvo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .row:nth-child(even) .column:nth-child(even), .row:nth-child(odd) .column:nth-child(odd) {
