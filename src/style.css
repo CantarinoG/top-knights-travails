@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Roboto&display=swap');
+
+:root {
+    --arvo: 'Arvo', serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: solid 0.5px red;
+    /*border: solid 1px red;*/
+}
+
+body {
+    background-image: url('./assets/pexels-charlie-solorzano-1762815.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 header {
@@ -11,6 +26,30 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+header h1 {
+    font-family: var(--arvo);
+}
+
+header h2, header button {
+    font-family: var(--roboto);
+}
+
+header button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: large;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header button:hover{
+    background-color: white;
+    color: black;
 }
 
 main {
@@ -35,4 +74,9 @@ main {
     flex: 1;
     aspect-ratio: 1/1;
     height: calc(min(76vh, 98vw) / 8);
+    cursor: pointer;
+}
+
+.row:nth-child(even) .column:nth-child(even), .row:nth-child(odd) .column:nth-child(odd) {
+	background-color: white;
 }

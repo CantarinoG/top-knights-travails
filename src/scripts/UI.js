@@ -1,3 +1,5 @@
+import favicon from '../assets/knight.svg';
+
 const body = document.querySelector('body');
 
 export function renderUI() {
@@ -5,7 +7,7 @@ export function renderUI() {
     <header>
         <h1>Knights Travails</h1>
         <h2>Position your knight...</h2>
-        <button>reset</button>
+        <button>RESET</button>
     </header>
     <main>
         <div id="board">
@@ -28,4 +30,12 @@ function createBoard() {
     }
     board.innerHTML = boardHtml;
     console.log(board);
+}
+
+export function setFavicon() {
+    let headTitle = document.querySelector('head');
+    let setFavicon = document.createElement('link');
+    setFavicon.setAttribute('rel','shortcut icon');
+    setFavicon.setAttribute('href', favicon);
+    headTitle.appendChild(setFavicon);
 }

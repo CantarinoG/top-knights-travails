@@ -1,4 +1,5 @@
 import './style.css';
-import { renderUI } from './scripts/UI';
+import { renderUI, setFavicon } from './scripts/UI';
 
 renderUI();
+setFavicon();
