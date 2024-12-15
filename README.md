@@ -1,38 +1,25 @@
-<details open>
-<summary>English</summary>
+# Knight's Travails
 
-### Knights Travails
-<br>
+### Overview
 
-Project from [TheOdinProject](https://www.theodinproject.com/lessons/javascript-knights-travails).
+This project provides a solution to the "Knight's Travails" problem: Given a knight at tile A on a chessboard, how many moves does it take for the knight to reach tile B, and what is the correct path?
 
-The project is a solution to the "Knights Travails" problem: If we have a knight at tile A in a chessboard, how many moves it takes for the knight to reach a tile B and which tiles form the correct path?
+The solution leverages graph theory. Starting from the initial tile, the algorithm calculates all possible moves (up to 8) the knight can make. If none of these moves reach the destination, the algorithm calculates possible moves from each subsequent tile. This process repeats until the knight reaches the destination.
 
-The algorithm to solve this problem is based on graph theory.
-Basically, from the starting tile, the algorithm will calculate the possible moves(which is a maximum of 8) the knight can take. If neither of these moves are the destination, then the algorithm will calculate the possible moves from each of these previous moves. The algorithm will then check if any of these moves get the knight to the destination. It keeps repeating until the knight reaches the destination.
+The webpage includes an interactive user interface, allowing users to select the knight's starting position and destination on a chessboard. The correct path is then displayed.
 
-The webpage provides an UI for this problem. The user will select the knight position and the destination in a chessboard, which will then show the correct path.
+### Features
 
-Deploy link: https://cantarinog.github.io/top-knights-travails/
+- Interactive chessboard UI.
+- Calculates the shortest path for a knight to travel between two tiles.
+- Visual representation of the path on the board.
 
-<br>
-</details>
+### Deployment
 
-<details>
-<summary>Português</summary>
+Check out the live version: [Knight's Travails](https://cantarinog.github.io/top-knights-travails/).
 
-### Caminho do Cavalo
-<br>
+### How It Works
 
-Projeto da [TheOdinProject](https://www.theodinproject.com/lessons/javascript-knights-travails).
-
-O projeto é uma solução para o problema do "Caminho do Cavalo": Se temos um cavalo no quadrado A de um tabuleiro de xadrez, quanto movimentos ele precisa para chegar num quadrado B, e quais quadrados formam o caminho correto?
-
-O algoritmo para resolver este problema se baseia em teoria dos grafos. Basicamente, tendo o quadrado inicial, o algoritmo calcula os possíveis movimentos(que são no máximo 8) que o cavalo pode escolher. Se nenhum destes movimentos alcançam o quadrado de destino, então o algoritmo vai calcular os possíveis movimentos a partir de cada um destes movimentos calculados anteriormente. O algoritmo vai então ver ser algum destes novos movimentos alcança o quadrado de destino. Ele continua repetindo este processo até que o cavalo alcançe o destino.
-
-A página web contém uma interface gráfica para este problema. O usuário vai selecionar a posição do cavalo e o quadrado de destino em um tabuleiro, que então mostrará o caminho correto.
-
-Link de deploy: https://cantarinog.github.io/top-knights-travails/
-
-<br>
-</details>
+1. Select the knight's starting position on the chessboard.
+2. Select the destination tile.
+3. The shortest path and number of moves will be displayed.
